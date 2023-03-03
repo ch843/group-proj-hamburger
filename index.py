@@ -38,7 +38,7 @@ class Customer(Person) :# Create a Customer class that inherits from the Person 
 # Create a variable for a Dictionary with keys of type string and values of type int.
 # This variable will hold information about each customer 
 dCustomer = {}
-
+for iCount in range(0, 100) #change to variable they make
 # Put 100 customers into the queue. Each customer object will already have a random number of burgers for each order
 
 # Make sure there is a key in the dictionary for each customer before you try incrementing their total! 
