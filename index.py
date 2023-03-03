@@ -17,24 +17,24 @@ class Order() :
 # Create a Person class
 class Person() :
     def __init__(self) :
-        self.customer_name = randomName() # Create a constructor that defines an instance variable called customer_name # The Person constructor should call the randomName() method and assign the return value (a random name) to the customer_name instance variable
+        self.customer_name = Person.randomName() # Create a constructor that defines an instance variable called customer_name # The Person constructor should call the randomName() method and assign the return value (a random name) to the customer_name instance variable
 
     def randomName(self) : # Create a method called randomName() that contains a list of 9 names:
         self.asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]# asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
-        return random.choice(asCustomers) # This method randomly returns one of the 9 names when called
+        return random.choice(self.asCustomers) # This method randomly returns one of the 9 names when called
 
 class Customer(Person) :# Create a Customer class that inherits from the Person class
 
     def __init__(self):
-        super().__init__()
-        self.order = Order()
+        super().__init__() # Create a constructor that calls the parent constructor
+        self.order = Order() # Create an instance variable called order in the constructor that is assigned an order object
 
 
 
 
 
-# Create a constructor that calls the parent constructor
-# Create an instance variable called order in the constructor that is assigned an order object
+
+
 
 # Create a variable for a Queue that will be assigned items of type Customer 
 # This variable will represent your line of customers (objects) waiting outside to place their hamburger orders
