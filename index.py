@@ -7,30 +7,33 @@ class Order() :
     def __init__ (self) :
         self.burger_count = Order.randomBurgers()
 
+    # Create a constructor that defines an instance variable called burger_count
+    # Create a method called randomBurgers that returns a number between 1 and 20
+    # The constructor should call the randomBurgers() method and assign the return value to the burger_count instance variable
     def randomBurgers(self) :
         self.burger_count = random.randint(1,20)
         return self.burger_count
-# Create a constructor that defines an instance variable called burger_count
-# Create a method called randomBurgers that returns a number between 1 and 20
-# The constructor should call the randomBurgers() method and assign the return value to the burger_count instance variable
 
 # Create a Person class
 class Person() :
     def __init__(self) :
-        self.customer_name = Person.randomName() # Create a constructor that defines an instance variable called customer_name # The Person constructor should call the randomName() method and assign the return value (a random name) to the customer_name instance variable
+        # Create a constructor that defines an instance variable called customer_name 
+        # The Person constructor should call the randomName() method and assign the return value (a random name) to the customer_name instance variable
+        self.customer_name = Person.randomName() 
 
-    def randomName(self) : # Create a method called randomName() that contains a list of 9 names:
+    # Create a method called randomName() that contains a list of 9 names:
+    # This method randomly returns one of the 9 names when called
+    def randomName(self) :
         self.asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]# asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
-        return random.choice(self.asCustomers) # This method randomly returns one of the 9 names when called
+        return random.choice(self.asCustomers)
 
-class Customer(Person) :# Create a Customer class that inherits from the Person class
+# Create a Customer class that inherits from the Person class
+# Create a constructor that calls the parent constructor
+# Create an instance variable called order in the constructor that is assigned an order object
+class Customer(Person) :
     def __init__(self):
-        super().__init__() # Create a constructor that calls the parent constructor
-        self.order = Order() # Create an instance variable called order in the constructor that is assigned an order object
-
-
-
-
+        super().__init__()
+        self.order = Order()
 
 # Create a variable for a Queue that will be assigned items of type Customer 
 # This variable will represent your line of customers (objects) waiting outside to place their hamburger orders
@@ -43,8 +46,10 @@ queueCustomers = []
 for iCount in range(0, 99):
     queueCustomers.append(Customer())
 
-dCustomer = {} # Create a variable for a Dictionary with keys of type string and values of type int.
-for iCount in range(0, 100) #change to variable they make
+# Create a variable for a Dictionary with keys of type string and values of type int.
+#change to variable they make
+dCustomer = {} 
+for iCount in range(0, 100)
 
 # Make sure there is a key in the dictionary for each customer before you try incrementing their total! 
 # Otherwise, add the customer to the dictionary.
