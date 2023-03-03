@@ -24,13 +24,9 @@ class Person() :
         return random.choice(self.asCustomers) # This method randomly returns one of the 9 names when called
 
 class Customer(Person) :# Create a Customer class that inherits from the Person class
-
     def __init__(self):
         super().__init__() # Create a constructor that calls the parent constructor
         self.order = Order() # Create an instance variable called order in the constructor that is assigned an order object
-
-
-
 
 
 
@@ -41,6 +37,7 @@ class Customer(Person) :# Create a Customer class that inherits from the Person 
 
 # Create a variable for a Dictionary with keys of type string and values of type int.
 # This variable will hold information about each customer 
+dCustomer = {}
 
 # Put 100 customers into the queue. Each customer object will already have a random number of burgers for each order
 
