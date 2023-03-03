@@ -19,7 +19,7 @@ class Person() :
     def __init__(self) :
         # Create a constructor that defines an instance variable called customer_name 
         # The Person constructor should call the randomName() method and assign the return value (a random name) to the customer_name instance variable
-        self.customer_name = Person.randomName() 
+        self.customer_name = self.randomName() 
 
     # Create a method called randomName() that contains a list of 9 names:
     # This method randomly returns one of the 9 names when called
@@ -32,7 +32,7 @@ class Person() :
 # Create an instance variable called order in the constructor that is assigned an order object
 class Customer(Person) :
     def __init__(self):
-        super().__init__()
+        super().__init__(self)
         self.order = Order()
 
 # Create a variable for a Queue that will be assigned items of type Customer 
@@ -47,9 +47,9 @@ for iCount in range(0, 99):
     queueCustomers.append(Customer())
 
 # Create a variable for a Dictionary with keys of type string and values of type int.
-#change to variable they make
 dCustomer = {} 
-for iCount in range(0, 100)
+for iCount in range(0, len(queueCustomers)) :
+    dCustomer[queueCustomers[iCount].asCustomers] 
 
 # Make sure there is a key in the dictionary for each customer before you try incrementing their total! 
 # Otherwise, add the customer to the dictionary.
