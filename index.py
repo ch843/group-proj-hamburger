@@ -1,4 +1,4 @@
-#Cassidy Hardisty, Kira Coleman, Tiffany Zang, Ryan Hawkins, Grace Chou
+#Cassidy Hardisty, Kira Coleman, Tiffany Zang, Ryan Hawkins, Grace Chou, Ella Cook
 
 # Create an Order class
 #import random
