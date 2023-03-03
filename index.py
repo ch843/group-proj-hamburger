@@ -5,11 +5,11 @@
 import random
 class Order() :
     def __init__ (self, burger_count) :
-        self.burger_count = 0
-        
+        self.burger_count = Order.randomBurgers()
 
-    def randomBurgers() :
-        return random.randint(1,20)
+    def randomBurgers(self) :
+        burger_count = random.randint(1,20)
+        return burger_count
 # Create a constructor that defines an instance variable called burger_count
 # Create a method called randomBurgers that returns a number between 1 and 20
 # The constructor should call the randomBurgers() method and assign the return value to the burger_count instance variable
