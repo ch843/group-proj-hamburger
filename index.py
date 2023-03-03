@@ -4,7 +4,7 @@
 #import random
 import random
 class Order() :
-    def __init__ (self, burger_count) :
+    def __init__ (self) :
         self.burger_count = Order.randomBurgers()
 
     def randomBurgers(self) :
