@@ -23,8 +23,9 @@ class Person() :
 
     # Create a method called randomName() that contains a list of 9 names:
     # This method randomly returns one of the 9 names when called
+    # asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
     def randomName(self) :
-        self.asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]# asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
+        self.asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
         return random.choice(self.asCustomers)
 
 # Create a Customer class that inherits from the Person class
@@ -43,7 +44,7 @@ queueCustomers = []
 # This variable will hold information about each customer 
 
 # Put 100 customers into the queue. Each customer object will already have a random number of burgers for each order
-for iCount in range(0, 99):
+for iCount in range(0, 101):
     queueCustomers.append(Customer())
 
 # Create a variable for a Dictionary with keys of type string and values of type int.
@@ -55,3 +56,7 @@ for iCount in range(0, len(queueCustomers)) :
 # Otherwise, add the customer to the dictionary.
 
 # Print out each customer and their total burgers ordered sorted by the most number of burgers ordered
+sortedCustomers = sorted(dCustomer.items(), key=lambda x: x[1], reverse=True)
+
+for iCount in range(0, len(queueCustomers)):
+    # print(sortedCustomers[iCount].ljust(19))
