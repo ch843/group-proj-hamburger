@@ -6,15 +6,24 @@
 # The constructor should call the randomBurgers() method and assign the return value to the burger_count instance variable
 
 # Create a Person class
-# Create a constructor that defines an instance variable called customer_name
-# Create a method called randomName() that contains a list of 9 names:
-# asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", 
-# "Carmen", "Invisible Swordsman", "Singing Bush"]
-# This method randomly returns one of the 9 names when called
-# The Person constructor should call the randomName() method and assign the return value (a random name) to the customer_name 
-# instance variable
+class Person() :
+    def __init__(self) :
+        self.customer_name = randomName() # Create a constructor that defines an instance variable called customer_name # The Person constructor should call the randomName() method and assign the return value (a random name) to the customer_name instance variable
 
-# Create a Customer class that inherits from the Person class
+    def randomName(self) : # Create a method called randomName() that contains a list of 9 names:
+        self.asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]# asCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
+        return random.choice(asCustomers) # This method randomly returns one of the 9 names when called
+
+class Customer(Person) :# Create a Customer class that inherits from the Person class
+
+    def __init__(self):
+        super().__init__()
+        self.order = Order()
+
+
+
+
+
 # Create a constructor that calls the parent constructor
 # Create an instance variable called order in the constructor that is assigned an order object
 
