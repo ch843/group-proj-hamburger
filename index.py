@@ -30,19 +30,19 @@ class Customer(Person) :# Create a Customer class that inherits from the Person 
         self.order = Order()
 
 
-
-
-
 # Create a constructor that calls the parent constructor
 # Create an instance variable called order in the constructor that is assigned an order object
 
 # Create a variable for a Queue that will be assigned items of type Customer 
 # This variable will represent your line of customers (objects) waiting outside to place their hamburger orders
+queueCustomers = []
 
 # Create a variable for a Dictionary with keys of type string and values of type int.
 # This variable will hold information about each customer 
 
 # Put 100 customers into the queue. Each customer object will already have a random number of burgers for each order
+for iCount in range(0, 99):
+    queueCustomers.append(Customer())
 
 # Make sure there is a key in the dictionary for each customer before you try incrementing their total! 
 # Otherwise, add the customer to the dictionary.
