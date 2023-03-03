@@ -5,7 +5,7 @@
 import random
 class Order() :
     def __init__ (self) :
-        self.burger_count = Order.randomBurgers()
+        self.burger_count = Order.randomBurgers(self)
 
     # Create a constructor that defines an instance variable called burger_count
     # Create a method called randomBurgers that returns a number between 1 and 20
@@ -32,7 +32,7 @@ class Person() :
 # Create an instance variable called order in the constructor that is assigned an order object
 class Customer(Person) :
     def __init__(self):
-        super().__init__(self)
+        super().__init__()
         self.order = Order()
 
 # Create a variable for a Queue that will be assigned items of type Customer 
@@ -49,7 +49,7 @@ for iCount in range(0, 99):
 # Create a variable for a Dictionary with keys of type string and values of type int.
 dCustomer = {} 
 for iCount in range(0, len(queueCustomers)) :
-    dCustomer[queueCustomers[iCount].asCustomers] 
+    dCustomer[queueCustomers[iCount].customer_name] = queueCustomers[iCount].order.burger_count
 
 # Make sure there is a key in the dictionary for each customer before you try incrementing their total! 
 # Otherwise, add the customer to the dictionary.
