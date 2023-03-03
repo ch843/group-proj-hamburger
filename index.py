@@ -5,7 +5,7 @@
 import random
 class Order() :
     def __init__ (self, burger_count) :
-        self.burger_count = 
+        self.burger_count = 0
         
 
     def randomBurgers() :
