@@ -4,12 +4,12 @@
 #import random
 import random
 class Order() :
-    def __init__ (self) :
+    def __init__ (self, burger_count) :
         self.burger_count = Order.randomBurgers()
 
     def randomBurgers(self) :
-        self.burger_count = random.randint(1,20)
-        return self.burger_count
+        burger_count = random.randint(1,20)
+        return burger_count
 # Create a constructor that defines an instance variable called burger_count
 # Create a method called randomBurgers that returns a number between 1 and 20
 # The constructor should call the randomBurgers() method and assign the return value to the burger_count instance variable
@@ -36,13 +36,15 @@ class Customer(Person) :# Create a Customer class that inherits from the Person 
 # This variable will represent your line of customers (objects) waiting outside to place their hamburger orders
 queueCustomers = []
 
-# Create a variable for a Dictionary with keys of type string and values of type int.
+
 # This variable will hold information about each customer 
-dCustomer = {}
-for iCount in range(0, 100) #change to variable they make
+
 # Put 100 customers into the queue. Each customer object will already have a random number of burgers for each order
 for iCount in range(0, 99):
     queueCustomers.append(Customer())
+
+dCustomer = {} # Create a variable for a Dictionary with keys of type string and values of type int.
+for iCount in range(0, 100) #change to variable they make
 
 # Make sure there is a key in the dictionary for each customer before you try incrementing their total! 
 # Otherwise, add the customer to the dictionary.
